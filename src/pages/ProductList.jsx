@@ -9,7 +9,7 @@ export default function ProductList() {
     //Component did mount
     let productService = new ProductService()
     productService.getProducts().then(result=>setProducts(result.data.data))
-  })
+  },[])
   return (
     <div>
       <Table celled>
